@@ -207,7 +207,7 @@ const EditVenue = () => {
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
         <div className="relative">
           <div className="w-16 h-16 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin"></div>
-          <div className="w-12 h-12 border-4 border-pink-200 border-t-pink-600 rounded-full absolute top-2 left-2 animate-pulse"></div>
+          <div className="w-12 h-12 border-4 border-pink-200 border-t-pink-600 rounded-full absolute top-2 left-2 animate-pulse" style={{ animationDirection: "reverse", animationDuration: "1.2s" }}></div>
         </div>
       </div>
     )
@@ -449,11 +449,19 @@ const EditVenue = () => {
                           type="button"
                           onClick={uploadPhotos}
                           disabled={uploadingPhotos}
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl shadow hover:opacity-95 disabled:opacity-60"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl shadow hover:opacity-95 disabled:opacity-60 transition-all duration-200"
                         >
-                          {uploadingPhotos ? "Uploading..." : <>
-                            <Upload className="w-4 h-4" /> Upload Photos
-                          </>}
+                          {uploadingPhotos ? (
+                            <>
+                              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                              Submitting...
+                            </>
+                          ) : (
+                            <>
+                              <Upload className="w-4 h-4" />
+                              Upload Photos
+                            </>
+                          )}
                         </button>
                         <button
                           type="button"
@@ -462,7 +470,8 @@ const EditVenue = () => {
                             setSelectedPhotos([])
                             setPhotoPreviews([])
                           }}
-                          className="px-4 py-2 bg-white border border-gray-200 rounded-xl text-gray-700 hover:bg-gray-50"
+                          disabled={uploadingPhotos}
+                          className="px-4 py-2 bg-white border border-gray-200 rounded-xl text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                         >
                           Clear
                         </button>
