@@ -157,10 +157,10 @@ const OrdersComponent = ({ user }) => {
 
     switch (itemType) {
       case 'venue':
-        navigate(`/venue-details/${itemId}`)
+        navigate(`/venues/${itemId}`)
         break
       case 'studio':
-        navigate(`/studio-details/${itemId}`)
+        navigate(`/studios${itemId}`)
         break
       case 'dish':
       case 'cuisine':
