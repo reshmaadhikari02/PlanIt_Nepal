@@ -290,7 +290,7 @@ const EditCuisines = () => {
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
                   <h4 className="text-sm font-semibold text-blue-800 mb-2">Dish Details:</h4>
                   <div className="text-xs text-blue-600 space-y-1">
-                    <div>• Price: ${formData.price || "0"} per dish</div>
+                    <div>• Price: Rs {formData.price || "0"} per dish</div>
                     <div>• Name: {formData.name || "Not specified"}</div>
                     <div>• Description: {formData.description ? `${formData.description.slice(0, 50)}...` : "Not provided"}</div>
                   </div>

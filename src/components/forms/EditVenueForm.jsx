@@ -526,7 +526,7 @@ const EditVenue = () => {
                   <h4 className="text-sm font-semibold text-blue-800 mb-2">Venue Details:</h4>
                   <div className="text-xs text-blue-600 space-y-1">
                     <div>• Capacity: {formData.capacity || "Not set"} guests</div>
-                    <div>• Price: ${formData.price || "0"} per event</div>
+                    <div>• Price: Rs {formData.price || "0"} per event</div>
                     <div>• Location: {formData.location || "Not specified"}</div>
                   </div>
                 </div>
