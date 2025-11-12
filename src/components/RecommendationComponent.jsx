@@ -311,7 +311,7 @@ const RecommendationComponent = ({ isOpen, onClose }) => {
           <Heart className="w-10 h-10 text-white" />
         </motion.div>
         <h3 className="text-2xl font-bold text-gray-800 mb-2">Your Preferences</h3>
-        <p className="text-gray-600">Help us personalize your wedding package</p>
+        <p className="text-gray-600">Help us personalize your event package</p>
       </div>
 
       {/* Location */}
@@ -428,7 +428,7 @@ const RecommendationComponent = ({ isOpen, onClose }) => {
             <Award className="w-10 h-10 text-white" />
           </motion.div>
           <h3 className="text-2xl font-bold text-gray-800 mb-2">Your Perfect Package</h3>
-          <p className="text-gray-600">Curated just for your dream wedding</p>
+          <p className="text-gray-600">Curated just for your dream event</p>
         </div>
 
         {/* Package Overview */}
@@ -653,7 +653,7 @@ const RecommendationComponent = ({ isOpen, onClose }) => {
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white rounded-t-2xl flex-shrink-0">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-xl font-bold">Wedding Package Recommender</h2>
+                <h2 className="text-xl font-bold">Event Package Recommender</h2>
                 <p className="text-purple-100 text-sm">Step {step} of 3</p>
               </div>
               <motion.button
